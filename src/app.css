@@ -1,0 +1,136 @@
+/* ═══════════════════════════════════════
+   Emojify Studio — Design Tokens & Global Styles
+   ═══════════════════════════════════════ */
+
+:root {
+  /* Surface */
+  --color-bg:        #FFFDF9;
+  --color-surface:   #FFFFFF;
+  --color-surface2:  #F5F3F0;
+  --color-border:    #E8E5E1;
+
+  /* Brand */
+  --color-primary:   #FF5E5B;
+  --color-secondary: #FFB347;
+  --color-accent1:   #45B7D1;
+  --color-accent2:   #96CEB4;
+
+  /* Text */
+  --color-text:      #2D3047;
+  --color-text2:     #6B6D7B;
+  --color-text3:     #989AA8;
+
+  /* Feedback */
+  --color-success:   #7BC67E;
+  --color-error:     #E05560;
+  --color-focus:     #45B7D1;
+
+  /* Sizing */
+  --radius-sm:  6px;
+  --radius-md:  10px;
+  --radius-lg:  16px;
+  --radius-xl:  24px;
+
+  /* Shadows */
+  --shadow-card:  0 1px 3px rgba(45,48,71,0.06), 0 1px 2px rgba(45,48,71,0.04);
+  --shadow-float: 0 4px 12px rgba(45,48,71,0.08), 0 2px 4px rgba(45,48,71,0.04);
+  --shadow-glow:  0 0 0 3px rgba(69,183,209,0.25);
+
+  /* Type scale */
+  --text-xs:   0.75rem;   /* 12px */
+  --text-sm:   0.8125rem; /* 13px */
+  --text-base: 0.9375rem; /* 15px */
+  --text-md:   1.0625rem; /* 17px */
+  --text-lg:   1.25rem;   /* 20px */
+  --text-xl:   1.5rem;    /* 24px */
+  --text-2xl:  1.875rem;  /* 30px */
+  --text-3xl:  2.25rem;   /* 36px */
+
+  /* Fonts */
+  --font-display: 'Fredoka', 'Nunito', sans-serif;
+  --font-body:    'Nunito', system-ui, sans-serif;
+
+  /* Spacing grid (4px base) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+}
+
+/* ── Dark theme ── */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg:        #1A1C2A;
+    --color-surface:   #242636;
+    --color-surface2:  #2E3042;
+    --color-border:    #3A3C50;
+    --color-text:      #E8E6F0;
+    --color-text2:     #A9AAB8;
+    --color-text3:     #787986;
+    --color-primary:   #FF7B78;
+    --color-secondary: #FFC06A;
+    --color-accent1:   #5EC9DE;
+    --shadow-card:     0 1px 3px rgba(0,0,0,0.2);
+    --shadow-float:    0 4px 12px rgba(0,0,0,0.25);
+    --shadow-glow:     0 0 0 3px rgba(94,201,222,0.3);
+  }
+}
+
+/* ── Reset & base ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Focus ring ── */
+:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* ── Selection ── */
+::selection {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+/* ── Reduced motion ── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ── Utility ── */
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
