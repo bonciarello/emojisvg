@@ -1,3 +1,2 @@
 User-agent: *
 Allow: /
-Sitemap: https://cristianporco.it/app/convertitore-di-emoji-da-testo-a-svg-con-animazione-reattiva/sitemap.xml

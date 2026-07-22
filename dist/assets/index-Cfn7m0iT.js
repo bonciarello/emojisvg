@@ -69,7 +69,6 @@ var it=Object.defineProperty;var ot=(t,e,n)=>e in t?it(t,e,{enumerable:!0,config
       "@type": "WebApplication",
       "name": "Emojify Studio",
       "description": "Converti emoji in file SVG animati con pulse, rotazione o rimbalzo. Scegli colore e dimensione, riordina le emoji ed esporta.",
-      "url": "https://cristianporco.it/app/convertitore-di-emoji-da-testo-a-svg-con-animazione-reattiva/",
       "applicationCategory": "DesignApplication",
       "operatingSystem": "Web",
       "browserRequirements": "JavaScript, SVG",
