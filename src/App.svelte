@@ -165,6 +165,7 @@
 
     .sidebar {
       position: static;
+      min-width: 0;
     }
 
     .brand-title {
